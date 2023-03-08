@@ -51,7 +51,7 @@
 .bodyComponent{
   padding-left: 160px;
   padding-right: 160px;
-  padding-top: 65px;
+  padding-top: 45px;
 }
 
 body{
