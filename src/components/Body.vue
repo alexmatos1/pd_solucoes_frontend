@@ -1,7 +1,7 @@
-<template>
-    <div class="listInfo">
+<template>    
+    <div v-if="mudar=='squad'" class="listInfo">
         <div class="">
-            <img src="../../public/Emoji.png" alt="">      
+            <img src="img/Emoji.png" alt="">      
             <p class="text-info">Nenhuma squad cadastrada. Crie uma squad para começar.</p>   
         </div>
         <div>
@@ -9,9 +9,9 @@
         </div>
     </div>
 
-    <div class="listInfo">
+    <div v-if="mudar == 'user'" class="listInfo">
         <div class="">
-            <img src="../../public/Emoji.png" alt="">      
+            <img src="img/Emoji.png" alt="">      
             <p class="text-info">Nenhuma Usuário cadastrado. Crie um Usuário para começar.</p>   
         </div>
         <div>
@@ -22,15 +22,20 @@
 </template>
 
 <script>
+import { stringifyExpression } from '@vue/compiler-core';
+
     export default{
         name: 'Header',
+        props:{
+            mudar: String
+        },
         data(){
             return{
-              
+            
             }
         },
         methods:{
-            
+
         }
     }
 </script>

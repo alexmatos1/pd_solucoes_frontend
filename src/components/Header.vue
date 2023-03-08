@@ -1,6 +1,6 @@
 <template>
     <div>
-        <img class="img-ajust" src="../../public/pds-logo.png" alt="">
+        <img class="img-ajust" src="img/pds-logo.png" alt="">
 
         <a class="text-ajust">Interface para lançamento de horas</a>       
     </div>
@@ -9,8 +9,8 @@
         <button class="btn-ajust">Lançar horas</button>
     </div>
     <div class="bottom-header-btn">
-        <button class="btn-aba" @click="$emit('change')">Squads</button>
-        <button class="btn-aba">Usuários</button>
+        <button class="btn-aba" @click="$emit('change', {aba: 'squad'})">Squads</button>
+        <button class="btn-aba" @click="$emit('change', {aba: 'user'})">Usuários</button>
     </div>
 </template>
 

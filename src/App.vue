@@ -3,7 +3,7 @@
     <Header @change="mudarAba"></Header>
   </div> 
   <div class="bodyComponent">
-    <Body></Body>
+    <Body :mudar="abaSelecionada"></Body>
   </div>
 </template>
 
@@ -17,9 +17,19 @@
       Header,
       Body
     },    
+    data(){
+      return{
+        abaSelecionada: "",
+      }      
+    },
     methods:{
-      mudarAba(){
-        console.log("mudando aba");
+      mudarAba({aba}){
+        if(aba == 'squad'){
+          this.abaSelecionada = "squad"
+        }
+        else if(aba == 'user'){
+          this.abaSelecionada = "user"
+        }        
       }
     }
   }
@@ -41,7 +51,7 @@
 .bodyComponent{
   padding-left: 160px;
   padding-right: 160px;
-  padding-top: 120px;
+  padding-top: 65px;
 }
 
 body{
